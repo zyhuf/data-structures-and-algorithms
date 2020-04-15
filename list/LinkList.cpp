@@ -116,3 +116,28 @@ bool ListDelete(LinkList *&L, int i, ElemType &e)
         return true;
     }
 }
+
+LinkList *ReverseList(LinkList *head)
+{
+    if (NULL == head || NULL == head->next)
+    {
+        return head;
+    }
+
+    LinkList *p, *q, *r;
+    p = head;
+    q = head->next;
+    head->next = NULL;
+
+    while (q)
+    {
+        r = q->next;
+        q->next = p;
+        p = q;
+        q = r;
+    }
+
+    head = p;
+
+    return head;
+}

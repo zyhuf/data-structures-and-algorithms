@@ -27,4 +27,7 @@ bool ListInsert(LinkList *&L, int i, ElemType e);
 //链表的删除
 bool ListDelete(LinkList *&L, int i, ElemType &e);
 
+//反转链表
+LinkList *ReverseList(LinkList *head);
+
 #endif // LINKLIST
