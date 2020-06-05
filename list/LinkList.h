@@ -30,4 +30,7 @@ bool ListDelete(LinkList *&L, int i, ElemType &e);
 //反转链表
 LinkList *ReverseList(LinkList *head);
 
+//判定链表是否有环
+bool hasCycle(LinkList *head);
+
 #endif // LINKLIST

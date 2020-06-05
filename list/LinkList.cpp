@@ -141,3 +141,23 @@ LinkList *ReverseList(LinkList *head)
 
     return head;
 }
+
+//判定链表是否有环
+bool hasCycle(LinkList *head)
+{
+    LinkList *fast = head;
+    LinkList *slow = head;
+
+    while (fast != NULL && fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
